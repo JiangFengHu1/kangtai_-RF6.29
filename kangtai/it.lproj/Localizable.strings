@@ -1,0 +1,172 @@
+//
+//
+/**
+ * Copyright (c) www.bugull.com
+ */
+//
+//
+"WIFI-Devices" = "Apparecchio WiFi";
+"Timer" = "Minuterie";
+"Lock" = "Blocco";
+"Edit" = "Modifica";
+"Add" = "Aggiungi";
+
+"Setting" = "Impostazione";
+"About" = "Riguardo";
+"Offline" = "Offline";
+"Name" = "Nome";
+"Icon" = "Salva";
+"Save" = "Enregistrer";
+"Mon" = "Lun";
+"Tue" = "Mar";
+"Wed" = "Mer";
+"Thu" = "Gio";
+"Fri" = "Ven";
+"Sat" = "Sab";
+"Sun" = "Dom";
+
+"ON" = "ON";
+"OFF" = "OFF";
+"Learn" = "Learn-in";
+
+"Change Password" = "Modifica password";
+"WiFi Devices" = "Apparecchio WiFi";
+"Add Device" = "Aggiungi apparecchio";
+"Search device and connect it to WiFi" = "Ricerca apparecchio e crea collegamento WiFi";
+
+"Device" = "Apparecchio";
+"Time" = "Orario";
+"Power" = "Potenza";
+"Repeat" = "Ripeti";
+"Type" = "Tipo";
+"Dimmer" = "Variateur";
+"About Us" = "Chi siamo";
+"Version" = "versione";
+"Add Timer" = "Aggiungi Timer";
+
+"Chosen time error." = "Errore di tempo";
+"Chosen date error." = "Errore di data";
+
+"WiFi SSID" = "SSID WiFi";
+"Password" = "Password";
+"Show Password" = "Mostra password";
+"Start" = "Start";
+"Connection process may take 30 seconds, please wait ..." = "Cela peut prendre jusqu'à 30 secondes.";
+"Tips" = "Suggerimenti";
+"Ten groups timer are limited" = "La funzione Timer è limitata a 10 gruppi";
+"Count Down" = "Countdown";
+"Absence" = "Assenza";
+"Add Count Down" = "Aggiungi Countdown";
+"Add Absence" = "Aggiungi Assenza";
+"After" = "Dopo";
+"From" = "Da";
+"To" = "A";
+"Login" = "Login";
+"Log In" = "Login";
+"Change password successfully" = "La password è stata correttamente modificata";
+"Forget Password"= "Si è dimenticata la password";
+"Sign Up"= "Registrazione";
+"Email"= "E-mail";
+"RF" = "RF";
+"Email will be used to retrieve your password,please fill in" = "Riceverà una nuova password per e-mail. Controllare che l'indirizzo e-mail sia corretto.";
+"Please enter your registered email" = "Immettere l'indirizzo e-mail.";
+"Register successfully" = "Registrazione riuscita.";
+"Login successful"= "Login successo";
+"Account" = "Conto";
+"Log Out" = "LogOut";
+"Sending" = "Invio";
+
+"Options can not be empty" = "Prego entra";
+"One group countdown is limited,want to delete it and add a new one?" = "La funzione Countdown è limitata a 1 gruppo";
+"One group absence is limited" = "La funzione di Assenza è limitata a 1 gruppo";
+"Sent successfully" = "Inviata con successo";
+"More data can be loaded on the pull" = "More data can be loaded on the pull";
+"Hour" = "Ora";
+"Minute" = "Minuti";
+"Year" = "Anno";
+"Month" = "Mese";
+"Day" = "Giorno";
+"Loading" = "Caricamento";
+"Old password" = "Vecchia password";
+"New password" = "Nuova password";
+"Confirm new password" = "Conferma password";
+"Firmware version" = "Firmware:";
+"Upgrade request has been sent" = "Richiesta di aggiornamento inviata.";
+"Find new version" = "Find new version";
+"Current camera is unavailable" = "Current camera is invalid";
+"Device name can not be empty" = "Prego entra";
+"OK" = "OK";
+"Confirm" = "OK";
+"Cancel" = "Annulla";
+"Camera" = "Telecamera";
+"Photos" = "Foto";
+"Link Timeout" = "Pausa";
+"Links" = "Collegamento";
+"Sorry, this operation is only supported at local." = "Purtroppo la funzione è supportata solo localmente";
+"Entered password twice are different" = "Le nuove password non coincidono";
+"Enter the different password" = "Le nuove password non coincidono";
+"Password length must be longer than 6" = "La password è troppo corta. Deve avere almeno 6 caratteri.";
+"Enter the correct password" = "La vecchia password è errata";
+"Register" = "Registro";
+"Please enter the wireless network password" = "Inserire la WiFi password.";
+"Update" = "Aggiornare";
+"Not Found" = "NO";
+
+"unit_rmb"="￥";
+"unit_doller"="$";
+"unit_"="€";
+"unit_rbl"="Rbl";
+"unit_gbp"="£";
+"Energy Info" = "Informazione energia";
+
+// 02.04
+"RF Devices" = "Apparecchi telecomandati";
+"WiFi Device" = "Apparecchio WiFi";
+"Add RF device" = "Aggiungi apparecchio telecomandato";
+"Device type" = "Tipo apparecchio";
+"Switch" = "Interruttore";
+"Curtain" = "Tapparelle";
+"Thermostat" = "Termostato";
+"The nearest WiFi device" = "Dispositivo più vicino";
+"Refreshing" = "Attualizza";
+"Refresh" = "Rinfrescare";
+"Up" = "Su";
+"Down" = "Giù";
+"High" = "Alto";
+"Low" = "Basso";
+"Edit RF device" = "Modifica apparecchio telecomandato";
+"Checking" = "Verifica";
+"No WiFi device with RF function" = "nessun dispositivo RF";
+"RF device name can not be empty" = "Prego entra";
+"This device is offline, please select other device" = "Apparecchio WiFi offline.";
+"Current network is unavailable" = "Si prega di attivare l'impostazione della rete";
+"Connecting" = "Collegamento";
+"Connect again successfully" = "Collegamento con il server in essere.";
+"Connect again failed, please check the network or device status" = "Collegamento con il server fallito. Controllare le impostazioni della rete";
+"Email address does not exist" = "Immettere l'indirizzo e-mail.";
+"Please enter a correct Email" = "L'indirizzo e-mail non è valido.";
+"Username already exist" = "Registrazione fallita. Controllare che l'indirizzo e-mail sia corretto.";
+"Username or password error" = "Registrazione fallita. Controllare che l'indirizzo e-mail sia corretto.";
+"Real-time" = "Tempo reale";
+"24H" = "24h";
+"Last 30 days" = "Ultimi 30 giorni";
+"Last 12 months" = "Ultimi 12 mesi";
+"Energy:" = "Energia:";
+"Cost:" = "Costi:";
+"Real time power" = "Consumo effettivo";
+"Electric current" = "Corrente";
+"Voltage" = "Tensione";
+"Electricity Price" = "Prezzo corrente";
+"Unit Cost" = "Prezzo/unità";
+"Currency" = "Währung";
+"Edit Timer" = "Compila timer";
+
+// 0629
+"later ON" = "ON";
+"later OFF" = "OFF";
+"RF Control" = "Telecomando";
+"Refreshing..." = "Attualizza";
+"Action" = "Action";
+"Reconnecting" = "Richiesta server";
+"Are you sure to log out?" = "Si vuole davvero effettuare il log out?";
+"WiFi Socket" = "Presa WiFi";

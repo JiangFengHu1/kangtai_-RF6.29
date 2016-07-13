@@ -1,0 +1,6 @@
+framework module SmartlinkLib {
+  umbrella header "SmartlinkLib.h"
+
+  export *
+  module * { export * }
+}

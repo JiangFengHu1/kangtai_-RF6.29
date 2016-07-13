@@ -1,0 +1,205 @@
+//
+//
+/**
+ * Copyright (c) www.bugull.com
+ */
+//
+//
+
+
+#import "ForGetPwdVC.h"
+
+@interface ForGetPwdVC ()<UITextFieldDelegate,UIAlertViewDelegate>
+
+
+@property(nonatomic,copy)NSString *emailString;
+@end
+
+@implementation ForGetPwdVC
+
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        // Custom initialization
+    }
+    return self;
+}
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    [self layUI];
+    
+    // Do any additional setup after loading the view.
+}
+
+- (void)layUI
+{
+    self.titlelab.text = NSLocalizedString(@"Forget Password", nil);
+    
+    CGSize size = [Util sizeForText:NSLocalizedString(@"Please enter your registered email", nil) Font:16.f forWidth:kScreen_Width - 40];
+    UILabel *tipsLab = [[UILabel alloc] initWithFrame:CGRectMake(20, barViewHeight + 25, kScreen_Width - 40, size.height)];
+    tipsLab.text = NSLocalizedString(@"Please enter your registered email", nil);
+    tipsLab.textColor = [UIColor colorWithRed:146.0/255 green:146.0/255 blue:146.0/255 alpha:1];
+    tipsLab.numberOfLines = 0;
+    tipsLab.font = [UIFont systemFontOfSize:16];
+    tipsLab.backgroundColor = [UIColor clearColor];
+    [self.view addSubview:tipsLab];
+    
+    UITextField *userText = [[UITextField alloc] initWithFrame:CGRectMake(20, tipsLab.frame.origin.y + 45, kScreen_Width - 40, 55)];
+    userText.placeholder = NSLocalizedString(@"Email", nil);
+    userText.font = [UIFont systemFontOfSize:16];
+    userText.textAlignment = NSTextAlignmentLeft;
+    userText.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
+    userText.borderStyle = UITextBorderStyleRoundedRect;
+    userText.delegate = self;
+    [self.view addSubview:userText];
+}
+
+- (void)leftButtonMethod:(UIButton *)but
+{
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (void)reloadButtonMethod:(UIButton *)sender
+{
+    [self performSelector:@selector(confirmMethod:) withObject:nil];
+}
+
+- (void)confirmMethod:(UIButton *)but
+{
+    [self.view endEditing:YES];
+    
+    if (self.emailString == nil || [self.emailString isEqualToString:@"" ])
+    {
+        [Util showAlertWithTitle:NSLocalizedString(@"Tips", nil) msg:NSLocalizedString(@"Options can not be empty", nil)];
+        
+        return;
+    }
+        
+    [MMProgressHUD setPresentationStyle:MMProgressHUDPresentationStyleFade];
+    [MMProgressHUD showWithTitle:NSLocalizedString(@"Loading", nil) status:@""];
+    
+    [self forgetRequestHttpToServerWithpsWord:self.emailString];
+}
+
+
+
+#pragma mark-HTTP
+- (void)forgetRequestHttpToServerWithpsWord:(NSString *)email
+{
+    NSMutableDictionary *dictary = [NSMutableDictionary dictionary];
+    [dictary setValue:AccessKey forKey:@"accessKey"];
+    [dictary setValue:email forKey:@"username"];
+    [HTTPService POSTHttpToServerWith:ForgetPSURL WithParameters:dictary success:^(NSDictionary *dic) {
+        
+        NSString * success = [dic objectForKey:@"success"];
+        //        [[Util getUtitObject] HUDHide];
+        
+        [MMProgressHUD dismiss];
+        
+        if ([success boolValue] == true) {
+            
+            UIAlertView *alert =[[UIAlertView alloc]initWithTitle:NSLocalizedString(@"Tips", nil) message:NSLocalizedString(@"Sent successfully", nil) delegate:self cancelButtonTitle:nil otherButtonTitles:NSLocalizedString(@"Confirm", nil), nil];
+            alert.tag = 237;
+            [alert show];
+            
+        }
+        if ([success boolValue] == false) {
+            
+            [Util showAlertWithTitle:NSLocalizedString(@"Tips", nil) msg:NSLocalizedString(@"Email address does not exist", nil)];
+        }
+    } error:^(NSError *error) {
+        
+        [MMProgressHUD dismiss];
+
+        [Util showAlertWithTitle:NSLocalizedString(@"Tips", nil) msg:NSLocalizedString(@"Link Timeout", nil)];
+        
+    }];
+    
+    
+    
+}
+
+//#pragma mark-
+//#pragma mark-<NSURLConnectionDelegate>
+//
+//
+//- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data
+//{
+//
+//       NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableLeaves error:nil];
+//
+//
+//
+//
+//}
+//- (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error
+//{
+//    NSLog(@"error=%@",error);
+//}
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    [self.view endEditing:YES];
+}
+#pragma mark-
+#pragma mark-<UITextFieldDelegate>
+//return键
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    
+    [self.view endEditing:YES];
+    
+    return YES;
+}
+
+
+
+
+//开始编辑
+- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField
+{
+    
+    return YES;
+}
+
+//结束编辑
+- (void)textFieldDidEndEditing:(UITextField *)textField
+{
+    self.emailString = textField.text;
+}
+
+
+
+
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (alertView.tag == 237) {
+        if (buttonIndex == 0) {
+            
+            [self.navigationController popViewControllerAnimated:YES];
+            
+        }
+    }
+}
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+/*
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+ {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
+
+@end

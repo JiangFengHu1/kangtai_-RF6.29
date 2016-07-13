@@ -1,0 +1,392 @@
+//
+//
+/**
+ * Copyright (c) www.bugull.com
+ */
+//
+//
+#import "SetTimerVC.h"
+#import "ZQCustomTimePicker.h"
+
+@interface SetTimerVC ()
+{
+    ZQCustomTimePicker *timePicker;
+    NSString *nowYearStr;
+    NSString *nowMonthStr;
+    NSString *nowDayStr;
+    NSMutableArray *taskIndexArr;
+}
+
+@property (nonatomic, assign)UInt8 hour;
+
+@property (nonatomic, assign)UInt8 min;
+
+@property (nonatomic, assign)UInt8 flag;
+
+@property (nonatomic, assign)BOOL isOFF;
+
+
+@property (nonatomic, strong)NSMutableArray *mutableArr;
+
+@property (nonatomic, assign)UInt8 dateDD;
+
+
+@end
+
+@implementation SetTimerVC
+
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        self.indexArray = [[NSMutableArray alloc] initWithCapacity:0];
+        
+        // Custom initialization
+    }
+    return self;
+}
+
+static int numberoftasks = 1;
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    
+    self.mutableArr = [[NSMutableArray alloc] initWithCapacity:7];
+    taskIndexArr = [NSMutableArray arrayWithObjects:@"1", @"2", @"3", @"4", @"5", @"6", @"7", @"8", @"9", @"10", nil];
+    if (self.indexArray.count > 0) {
+        
+        for (NSDictionary *dict in self.indexArray) {
+            
+            if ([taskIndexArr containsObject:dict[@"indx"]]) {
+                [taskIndexArr removeObject:dict[@"indx"]];
+            }
+        }
+    }
+
+    [self loadUI];
+}
+
+- (void)loadUI
+{
+    self.titlelab.text = NSLocalizedString(@"Add Timer",nil);
+    self.titlelab.bounds = CGRectMake(0, 0, 200, 40);
+    self.view.backgroundColor = RGBA(248.0, 248.0, 248.0, 1.0);
+    
+    UIView *leftView = [[UIView alloc] initWithFrame:CGRectMake(0, self.barView.frame.size.height, 90, kScreen_Height - self.barView.frame.size.height)];
+    leftView.backgroundColor = RGBA(242.0, 242.0, 242.0, 1.0);
+    [self.view addSubview:leftView];
+    UIView *firstLineView = [[UIView alloc] initWithFrame:CGRectMake(leftView.frame.size.width, (int)(kScreen_Height - self.barView.frame.size.height) / 2 + 34, kScreen_Width - leftView.frame.size.width, 1)];
+    firstLineView.backgroundColor = RGBA(220.0, 220.0, 220.0, 1.0);
+    [self.view addSubview:firstLineView];
+    UIView *secondLineView = [[UIView alloc] initWithFrame:CGRectMake(leftView.frame.size.width, (int)(kScreen_Height - self.barView.frame.size.height) / 2 + 114, kScreen_Width - leftView.frame.size.width, 1)];
+    secondLineView.backgroundColor = RGBA(220.0, 220.0, 220.0, 1.0);
+    [self.view addSubview:secondLineView];
+    
+    UILabel *afterLab = [[UILabel alloc] initWithFrame:CGRectMake(13, self.barView.frame.size.height - 44 + firstLineView.frame.origin.y / 2, 80, 40)];
+    afterLab.backgroundColor = [UIColor clearColor];
+    afterLab.font = [UIFont systemFontOfSize:18];
+    afterLab.text = NSLocalizedString(@"Time",nil);
+    afterLab.numberOfLines = 0;
+    afterLab.textColor = RGBA(0.0, 0.0, 0.0, 1.0);
+    [self.view addSubview:afterLab];
+    
+    UILabel *powerLab = [[UILabel alloc] initWithFrame:CGRectMake(13, (firstLineView.frame.origin.y + secondLineView.frame.origin.y) / 2 - 21, 80, 40)];
+    powerLab.backgroundColor = [UIColor clearColor];
+    powerLab.font = [UIFont systemFontOfSize:18];
+    powerLab.text = NSLocalizedString(@"Power", nil);
+    powerLab.numberOfLines = 0;
+    powerLab.textColor = RGBA(0.0, 0.0, 0.0, 1.0);
+    [self.view addSubview:powerLab];
+    
+    UIButton *switchButt = [UIButton buttonWithType:UIButtonTypeCustom];
+    switchButt.frame = CGRectMake(leftView.frame.size.width + 25, powerLab.center.y - 30, 65, 65);
+    [switchButt addTarget:self action:@selector(switchButtDeviceMethod:) forControlEvents:UIControlEventTouchUpInside];
+    [switchButt setImage:[UIImage imageNamed:@"power__off_big.png"] forState:UIControlStateNormal];
+    [switchButt setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [self.view addSubview:switchButt];
+    
+    float pickerF = (kScreen_Height == 480) ? 5 : 28;
+    float x = (float)kScreen_Width / 320;
+    float y = (float)kScreen_Height / 568;
+    float h = (kScreen_Width > 320) ? y : 1;
+    
+    timePicker = [[ZQCustomTimePicker alloc] initWithFrame:CGRectMake((leftView.frame.size.width + 20) * x, (barViewHeight + pickerF) * h, 205, 170) withIsZero:NO];
+    [self.view addSubview:timePicker];
+    
+    NSDate *now = [NSDate date];
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"yyyyMMddHHmmss"];
+    NSString *dateString = [dateFormatter stringFromDate:now];
+    NSInteger monthInt = [dateString substringWithRange:NSMakeRange(4, 2)].integerValue;
+    NSInteger dayInt = [dateString substringWithRange:NSMakeRange(6, 2)].integerValue;
+    NSString *nowDateString = [NSString stringWithFormat:@"%@-%ld-%ld %@:%@:%@",[dateString substringWithRange:NSMakeRange(0, 4)],(long)monthInt,(long)dayInt,[dateString substringWithRange:NSMakeRange(8, 2)],[dateString substringWithRange:NSMakeRange(10, 2)],[dateString substringWithRange:NSMakeRange(12, 2)]];
+    nowYearStr = [dateString substringWithRange:NSMakeRange(0, 4)];
+    nowMonthStr = [dateString substringWithRange:NSMakeRange(4, 2)];
+    nowDayStr = [dateString substringWithRange:NSMakeRange(6, 2)];
+    NSString *utcStr = [self getUTCFormateLocalDate:nowDateString];
+    NSArray *array =  [utcStr componentsSeparatedByString:@"T"];
+    NSString *timeString =  [array objectAtIndex:1];
+    NSArray *timeArray =  [timeString componentsSeparatedByString:@":"];
+    self.hour = [[timeArray objectAtIndex:0] intValue];
+    self.min = [[timeArray objectAtIndex:1] intValue];
+    
+    UILabel *repeatLabel = [[UILabel alloc] initWithFrame:CGRectMake(powerLab.frame.origin.x, powerLab.frame.origin.y +powerLab.frame.origin.y - afterLab.frame.origin.y - 22, 58, 48)];
+    repeatLabel.backgroundColor = [UIColor clearColor];
+    repeatLabel.font = [UIFont systemFontOfSize:18];
+    repeatLabel.text = NSLocalizedString(@"Repeat", nil);
+    repeatLabel.textColor = RGBA(0.0, 0.0, 0.0, 1.0);
+    [self.view addSubview:repeatLabel];
+    NSArray *arr = [NSArray arrayWithObjects:NSLocalizedString(@"Sun", nil),NSLocalizedString(@"Mon", nil),NSLocalizedString(@"Tue", nil),NSLocalizedString(@"Wed", nil),NSLocalizedString(@"Thu", nil),NSLocalizedString(@"Fri", nil),NSLocalizedString(@"Sat", nil),nil];
+    
+    float repeatF = (kScreen_Height == 480) ? 100 : 120;
+    for (int i=0; i < 7; i ++) {
+        
+        UIButton *dataButt = [UIButton buttonWithType:UIButtonTypeCustom];
+        if (i < 4) {
+            dataButt.frame = CGRectMake(i * 50 + (switchButt.frame.origin.x - 15) * x, switchButt.frame.origin.y + repeatF * h, 50, 48);
+        } else {
+            dataButt.frame = CGRectMake((i-4) * 50 + (switchButt.frame.origin.x - 15) * x, switchButt.frame.origin.y + (repeatF + 50) * h, 50, 48);
+        }
+        [dataButt addTarget:self action:@selector(dataButtDeviceMethod:) forControlEvents:UIControlEventTouchUpInside];
+        dataButt.tag = i +666;
+        [dataButt setTitle:[arr objectAtIndex:i] forState:UIControlStateNormal];
+        dataButt.titleLabel.font = [UIFont systemFontOfSize:21];
+        [dataButt setTitleColor:[UIColor colorWithRed:164.0/255 green:164.0/255 blue:164.0/255 alpha:1] forState:UIControlStateNormal];
+        [self.view addSubview:dataButt];
+    }
+}
+
+- (NSString *)getUTCFormateLocalDate:(NSString *)localDate
+{
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    //输入格式
+    [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+    
+    NSDate *dateFormatted = [dateFormatter dateFromString:localDate];
+    NSTimeZone *timeZone = [NSTimeZone timeZoneWithName:@"UTC"];
+    [dateFormatter setTimeZone:timeZone];
+    //输出格式
+    [dateFormatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ssZ"];
+    NSString *dateString = [dateFormatter stringFromDate:dateFormatted];
+    return dateString;
+}
+
+#pragma mark-
+#pragma mark-Event
+- (void)reloadButtonMethod:(UIButton *)sender
+{
+    NSDateComponents *components = [[NSCalendar currentCalendar] components:NSDayCalendarUnit | NSMonthCalendarUnit | NSYearCalendarUnit |NSCalendarUnitMinute |NSCalendarUnitSecond | NSCalendarUnitHour fromDate:[NSDate date]];
+    
+    NSString *strimg = [NSString stringWithFormat:@"%ld-%ld-%ld %02ld:%02ld:%02ld",(long)[components year],(long)[components month],(long)[components day],(long)timePicker.hourPicker.currentItemIndex,(long)timePicker.minutePicker.currentItemIndex,(long)[components second]];
+    NSDateFormatter *inputFormatter = [[NSDateFormatter alloc] init] ;
+    [inputFormatter setLocale:[[NSLocale alloc] initWithLocaleIdentifier:@"en_US"] ];
+    [inputFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+    NSDate* inputDate = [inputFormatter dateFromString:strimg];
+    
+    [self yymmdd:[NSString stringWithFormat:@"%@year%@month%@day", nowYearStr,nowMonthStr,nowDayStr] hour: timePicker.hourPicker.currentItemIndex min:timePicker.minutePicker.currentItemIndex Withdate:inputDate];
+    
+    [self RestructuringData];
+    
+    BitSwitch bitFlag = kBit8On;
+    self.flag = self.flag | bitFlag;
+    numberoftasks = [taskIndexArr[0] intValue];
+    Device *device = [[DeviceManagerInstance getlocalDeviceDictary] objectForKey:self.macString];
+    NSLog(@"=== %d %d",self.hour, self.min);
+    
+    //  设置定时
+    [DeviceManagerInstance setTimeringAlermWithMacString:device.mac Withhost:device.host flag:self.flag Hour:self.hour min:self.min TaskCount:numberoftasks Switch:self.isOFF key:device.key With:device.localContent deviceType:device.deviceType];
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (void)switchButtDeviceMethod:(UIButton *)but
+{
+    bool isSelected = !but.isSelected;
+    [but setSelected:isSelected];
+    
+    //    如果要打开就 |
+    if (isSelected) {
+        [but setImage:[UIImage imageNamed:@"power__on_big.png"] forState:UIControlStateNormal];
+        self.isOFF = YES;
+    }else{
+        [but setImage:[UIImage imageNamed:@"power__off_big.png"] forState:UIControlStateNormal];
+        self.isOFF = NO;
+    }
+}
+
+- (void)dataButtDeviceMethod:(UIButton *)but
+{
+    NSInteger indx = but.tag - 666;
+    //    反选；
+    bool isSelected = !but.isSelected;
+    [but setSelected:isSelected];
+    
+    NSString *string = nil;
+    string = [NSString stringWithFormat:@"%ld",(long)indx];
+    
+    if (isSelected) {
+        [but setTitleColor:[UIColor colorWithRed:20/255 green:170.0/255 blue:240.0/255 alpha:1] forState:UIControlStateNormal];
+        
+        [self.mutableArr addObject:string];
+        
+    }else{
+        [but setTitleColor:[UIColor colorWithRed:164.0/255 green:164.0/255 blue:164.0/255 alpha:1] forState:UIControlStateNormal];
+        
+        [self.mutableArr removeObject:string];
+    }
+}
+
+#pragma mark-
+#pragma mark-UIDatePicker
+
+- (void)yymmdd:(NSString *)string hour:(NSInteger)hour min:(NSInteger)min Withdate:(NSDate *)nowDate
+{
+    NSArray *array = [self loadDataWithDate:nowDate WithDateOrTime:NO];
+    
+    NSString*hou = [array objectAtIndex:0];
+    NSString*mi = [array objectAtIndex:1];
+    self.hour = [hou intValue];
+    self.min = [mi intValue];
+}
+
+#pragma mark-
+#pragma mark-组装Flag
+- (void)RestructuringData
+{
+    NSDateComponents *components = [[NSCalendar currentCalendar] components:NSDayCalendarUnit | NSMonthCalendarUnit | NSYearCalendarUnit |NSCalendarUnitMinute |NSCalendarUnitSecond | NSCalendarUnitHour fromDate:[NSDate date]];
+    NSInteger currentWeekDay = [components weekday];
+    
+    for (NSString *str in self.mutableArr) {
+        
+        int index =   [str intValue];
+        if ((currentWeekDay-self.dateDD) == 1 || (currentWeekDay-self.dateDD) == -6)
+        {
+            
+            if (index == 0) {
+                index = 7;
+            }
+            
+            index = index-1;
+            
+        }
+        
+        if ((currentWeekDay-self.dateDD) == -1 || (currentWeekDay-self.dateDD) == 6) {
+            if (index == 7 ) {
+                index = 0;
+            }
+            
+            index = index + 1;
+            
+        }
+        BitSwitch bitFlag;
+        switch (index) {
+            case 0://周一
+                
+                bitFlag = kBit7On;
+                
+                break;
+            case 1://周二
+                
+                
+                bitFlag = kBit1On;
+                
+                break;
+            case 2://周三
+                
+                bitFlag = kBit2On;
+                
+                break;
+            case 3://周四
+                bitFlag = kBit3On;
+                
+                break;
+            case 4://周五
+                bitFlag = kBit4On;
+                
+                break;
+            case 5://周六
+                bitFlag = kBit5On;
+                
+                break;
+            case 6://周日
+                bitFlag = kBit6On;
+                
+                break;
+                
+            default:
+                break;
+        }
+        self.flag = self.flag | bitFlag;
+    }
+}
+
+
+- (NSDate *)dateStingAndMinWith:(UInt8 )hour WIthMin:(UInt8)min With:(NSString *)moth
+{
+    NSDateFormatter *df = [[NSDateFormatter alloc] init];
+    NSDate *utcData = [NSDate date];
+    
+    NSString *utcDatatemp =  [NSString stringWithFormat:@"%@",utcData];
+    NSArray *utcDataarray = [utcDatatemp componentsSeparatedByString:@" "];
+    df.dateFormat = @"yyyy-MM-dd HH:mm:ssZ";
+    NSTimeZone *gmt = [NSTimeZone timeZoneWithAbbreviation:@"GMT"];
+    [df setTimeZone:gmt];
+    
+    NSDate *datessss;
+    if (moth == nil) {
+        datessss =[df dateFromString:[NSString stringWithFormat:@"%@ %d:%d:30+0000",[utcDataarray objectAtIndex:0],hour,min]];
+        
+    }else{
+        datessss =[df dateFromString:[NSString stringWithFormat:@"%@ %d:%d:30+0000",moth,hour,min]];
+        
+    }
+    return  datessss;
+}
+
+#pragma mark-
+#pragma mark-转换GMT+0时间
+
+- (NSArray *)loadDataWithDate:(NSDate *)date WithDateOrTime:(BOOL)isDate
+{
+    NSDateComponents *components = [[NSCalendar currentCalendar] components:NSDayCalendarUnit | NSMonthCalendarUnit | NSYearCalendarUnit |NSCalendarUnitMinute |NSCalendarUnitSecond | NSCalendarUnitHour fromDate:date];
+    
+    NSDateFormatter* dateFo = [[NSDateFormatter alloc] init];//实例化一个NSDateFormatter对象
+    
+    [dateFo setDateFormat:@"yyyy-MM-dd HH:mm:ss"];//设定时间格式,这里可以设置成自己需要的格式
+    
+    
+    NSDate *datessss =[dateFo dateFromString:[NSString stringWithFormat:@"%ld-%ld-%ld %ld:%ld:%ld",(long)[components year],(long)[components month],(long)[components day],(long)[components hour],(long)[components minute],(long)[components second]]];
+    dateFo.timeZone = [NSTimeZone timeZoneForSecondsFromGMT:0];//这就是GMT+0时区了
+    NSString *dateString = [dateFo stringFromDate:datessss];
+    
+    
+    NSArray *array =  [dateString componentsSeparatedByString:@" "];
+    
+    NSString *daString =  [array objectAtIndex:0];
+    
+    NSString *timeString =  [array objectAtIndex:1];
+    
+    NSArray *dateArray =  [daString componentsSeparatedByString:@"-"];
+    //    self.dateDD = [[dateArray objectAtIndex:2] intValue];
+    self.dateDD = [components weekday];
+    NSArray *timeArray =  [timeString componentsSeparatedByString:@":"];
+    if (isDate == YES) {
+        return dateArray;
+    }
+    else{
+        return timeArray;
+    }
+    return nil;
+}
+
+- (void)leftButtonMethod:(UIButton *)but
+{
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+@end

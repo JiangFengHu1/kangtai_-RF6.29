@@ -1,0 +1,172 @@
+//
+//
+/**
+ * Copyright (c) www.bugull.com
+ */
+//
+//
+"WIFI-Devices" = "Appareil WiFi";
+"Timer" = "Minuterie";
+"Lock" = "Verrouiller";
+"Edit" = "Modifier";
+"Add" = "Ajouter";
+
+"Setting" = "Réglage";
+"About" = "Über";
+"Offline" = "Hors ligne";
+"Name" = "Nom";
+"Icon" = "Icône";
+"Save" = "Enregistrer";
+"Mon" = "Lun";
+"Tue" = "Mar";
+"Wed" = "Mer";
+"Thu" = "Jeu";
+"Fri" = "Ven";
+"Sat" = "Sam";
+"Sun" = "Dim";
+
+"ON" = "MARCHE";
+"OFF" = "ARRÊT";
+"Learn" = "Apprendre";
+
+"Change Password" = "Changer le mot de passe";
+"WiFi Devices" = "Appareil WiFi";
+"Add Device" = "Ajouter appareil ";
+"Search device and connect it to WiFi" = "Rechercher un appareil et le connecter au WiFi";
+
+"Device" = "Appareil ";
+"Time" = "Temps";
+"Power" = "Interrupteur";
+"Repeat" = "Répéter";
+"Type" = "Type";
+"Dimmer" = "Variateur";
+"About Us" = "Au sujet de nous";
+"Version" = "Version";
+"Add Timer" = "Ajouter minuterie";
+
+"Chosen time error." = "Erreur de temps";
+"Chosen date error." = "Erreur de date";
+
+"WiFi SSID" = "WiFi SSID";
+"Password" = "Mot de passe";
+"Show Password" = "Afficher mot de passe";
+"Start" = "Démarrer";
+"Connection process may take 30 seconds, please wait ..." = "Cela peut prendre jusqu'à 30 secondes.";
+"Tips" = "Astuces";
+"Ten groups timer are limited" = "La fonction de minuterie est malheureusement limitée à 10 groupes";
+"Count Down" = "Compte à rebours";
+"Absence" = "Absence";
+"Add Count Down" = "Ajouter compte à rebours";
+"Add Absence" = "Ajouter absence ";
+"After" = "Après";
+"From" = "De";
+"To" = "A";
+"Login" = "Login";
+"Log In" = "Login";
+"Change password successfully" = "Le changement du mot de passe a été effectué";
+"Forget Password"= "Mot de passe oublié";
+"Sign Up"= "Inscription";
+"Email"= "E-mail";
+"RF" = "RF";
+"Email will be used to retrieve your password,please fill in" = "L'e-mail sera utilisé pour réinitialiser le mot de passe. Assurez-vous que l'e-mail est correct.";
+"Please enter your registered email" = "Veuillez entrer votre adresse e-mail.";
+"Register successfully" = "L'inscription a réussi, veuillez effectuer le login.";
+"Login successful"= "Connexion réussie";
+"Account" = "Compte";
+"Log Out" = "LogOut";
+"Sending" = "Envoi";
+
+"Options can not be empty" = "Entrez s'il vous plait";
+"One group countdown is limited,want to delete it and add a new one?" = "Die Countdown-Funktion ist leider auf 1 Gruppe begrenzt";
+"One group absence is limited" = "Die Abwesenheitsfunktion ist leider auf 1 Gruppe begrenzt";
+"Sent successfully" = "Erfolgreich gesendet";
+"More data can be loaded on the pull" = "More data can be loaded on the pull";
+"Hour" = "Stunde";
+"Minute" = "Minute";
+"Year" = "Jahr";
+"Month" = "Monat";
+"Day" = "Tag";
+"Loading" = "Laden";
+"Old password" = "Altes Passwort";
+"New password" = "Neues Passwort";
+"Confirm new password" = "Passwort bestätigen";
+"Firmware version" = "Firmware:";
+"Upgrade request has been sent" = "Die Aktualisierungsanfrage wurde versendet.";
+"Find new version" = "Find new version";
+"Current camera is unavailable" = "Current camera is invalid";
+"Device name can not be empty" = "Entrez s'il vous plait";
+"OK" = "OK";
+"Confirm" = "OK";
+"Cancel" = "Annuler";
+"Camera" = "Appareil photo";
+"Photos" = "Photo";
+"Link Timeout" = "Temps libre";
+"Links" = "Lien";
+"Sorry, this operation is only supported at local." = "Cette opération est malheureusement possible uniquement au niveau local";
+"Entered password twice are different" = "Le nouveau mot de passe et la confirmation ne concordent pas";
+"Enter the different password" = "Le nouveau mot de passe et la confirmation ne concordent pas";
+"Password length must be longer than 6" = "Le mot de passe est trop court. Il doit avoir au minimum 6 caractères.";
+"Enter the correct password" = "L'ancien mot de passe n'est pas correct";
+"Register" = "Enregistrer";
+"Please enter the wireless network password" = "Veuillez entrer votre mot de passe";
+"Update" = "Mettre à jour";
+"Not Found" = "Non";
+
+"unit_rmb"="￥";
+"unit_doller"="$";
+"unit_"="€";
+"unit_rbl"="Rbl";
+"unit_gbp"="£";
+"Energy Info" = "Info énergie";
+
+// 02.04
+"RF Devices" = "Appareils RF";
+"WiFi Device" = "Appareil WiFi";
+"Add RF device" = "Ajouter appareil RF";
+"Device type" = "Type d'appareil";
+"Switch" = "Commutateur";
+"Curtain" = "Store";
+"Thermostat" = "Thermostat";
+"The nearest WiFi device" = "Dispositif plus proche";
+"Refreshing" = "Aktualisieren";
+"Refresh" = "Régénération";
+"Up" = "Monter";
+"Down" = "Descendre";
+"High" = "Haut";
+"Low" = "Bas";
+"Edit RF device" = "Modifier appareil RF";
+"Checking" = "Vérification";
+"No WiFi device with RF function" = "aucun dispositif de rf";
+"RF device name can not be empty" = "Entrez s'il vous plait";
+"This device is offline, please select other device" = "L'appareil WIFI est hors ligne";
+"Current network is unavailable" = "Veuillez activer d'abord le réseau";
+"Connecting" = "Connexion";
+"Connect again successfully" = "Connecté au serveur";
+"Connect again failed, please check the network or device status" = "La connexion au serveur a échoué, veuillez contrôler le réseau";
+"Email address does not exist" = "Veuillez entrer votre adresse e-mail.";
+"Please enter a correct Email" = "Le format d'e-mail n'est pas valide";
+"Username already exist" = "Le login a échoué, veuillez contrôler l'e-mail et le mot de passe";
+"Username or password error" = "Le login a échoué, veuillez contrôler l'e-mail et le mot de passe";
+"Real-time" = "Temps réel";
+"24H" = "24 h.";
+"Last 30 days" = "30 derniers jours";
+"Last 12 months" = "12 derniers mois";
+"Energy:" = "Energie:";
+"Cost:" = "Coût:";
+"Real time power" = "Consommation effective";
+"Electric current" = "Courant électrique";
+"Voltage" = "Tension";
+"Electricity Price" = "Prix électricité";
+"Unit Cost" = "Coût unitaire";
+"Currency" = "Devise";
+"Edit Timer" = "Modifier minuterie";
+
+// 0629
+"later ON" = "MARCHE";
+"later OFF" = "ARRÊT";
+"RF Control" = "Commande RF";
+"Refreshing..." = "Régénération";
+"Action" = "Action";
+"Reconnecting" = "Renouer";
+"Are you sure to log out?" = "Etes-vous sûre-e que vous voulez quitter?";
+"WiFi Socket" = "Prise WiFi";

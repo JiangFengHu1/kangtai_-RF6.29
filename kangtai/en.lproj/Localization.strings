@@ -1,0 +1,38 @@
+/* 
+  Localization.strings
+  KeMan
+
+  Created by user on 14-7-26.
+
+*/
+"WIFI-Devices" = "WIFI-Devices";
+"Timer" = "Timer";
+"Lock" = "Lock";
+"Edit" = "Edit";
+"Setting" = "Setting";
+"About" = "About";
+"Offline" = "Offline";
+"Name" = "Name";
+"icon" = "icon";
+"cancle" = "cancle";
+"save" = "save";
+"Monday" = "Monday";
+"Tuesday" = "Tuesday";
+"Wednesday" = "Wednesday";
+"Thursday" = "Thursday";
+"Friday" = "Friday";
+"Saturday" = "Saturday";
+"Sunday" = "Sunday";
+"ON" = "ON";
+"OFF" = "OFF";
+"Time" = "Time";
+"Switch" = "Switch";
+"Repeat" = "Repeat";
+"Type" = "Type";
+"Dimmer" = "Dimmer";
+"Hidden devices" = "Hidden devices";
+"About We" = "About We";
+"verson" = "verson";
+"The device is visible to others" = "The device is visible to others";
+"Check For Updatas " = "Check For Updatas ";
+"Add Timer" = "Add Timer";

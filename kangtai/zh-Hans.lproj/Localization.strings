@@ -1,0 +1,39 @@
+/* 
+  Localization.strings
+  KeMan
+
+  Created by user on 14-7-26.
+
+*/
+
+"WIFI-Devices" = "WIFI-设备";
+"Timer" = "定时";
+"Lock" = "锁定";
+"Edit" = "编辑";
+"Setting" = "设置";
+"About" = "关于";
+"Offline" = "离线";
+"Name" = "名称";
+"icon" = "图标";
+"cancle" = "取消";
+"save" = "保存";
+"Monday" = "星期一";
+"Tuesday" = "星期二";
+"Wednesday" = "星期三";
+"Thursday" = "星期四";
+"Friday" = "星期五";
+"Saturday" = "星期六";
+"Sunday" = "星期日";
+"ON" = "开";
+"OFF" = "关";
+"Time" = "时间";
+"Switch" = "开关";
+"Repeat" = "重复";
+"Type" = "类型";
+"Dimmer" = "调亮";
+"Hidden devices" = "隐藏设备";
+"About We" = "关于我们";
+"verson" = "版本";
+"The device is visible to others" = "设备是否对他人可见";
+"Check For Updatas " = "检查版本更新 ";
+"Add Timer" = "添加定时";

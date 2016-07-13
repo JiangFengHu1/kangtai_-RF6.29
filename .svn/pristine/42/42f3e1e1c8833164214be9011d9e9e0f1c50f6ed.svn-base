@@ -1,0 +1,74 @@
+//
+//
+/**
+ * Copyright (c) www.bugull.com
+ */
+//
+//
+
+#import "LockCell.h"
+
+@implementation LockCell
+
+- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
+{
+    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
+    if (self) {
+    
+        self.detailLab = [[UILabel alloc] initWithFrame:CGRectMake(15, 35, 170, 40)];
+        self.detailLab.backgroundColor = [UIColor clearColor];
+        self.detailLab.font = [UIFont systemFontOfSize:15];
+        self.detailLab.numberOfLines = 2;
+        self.detailLab.textColor = [UIColor colorWithRed:151.0/255 green:151.0/255 blue:151.0/255 alpha:1] ;
+        [self addSubview:self.detailLab];
+        
+        self.switchLab = [[UILabel alloc] initWithFrame:CGRectMake(92, 10, 160, 40)];
+        self.switchLab.backgroundColor = [UIColor clearColor];
+        self.switchLab.font = [UIFont systemFontOfSize:17];
+        self.switchLab.numberOfLines = 0;
+        self.switchLab.textColor =  [UIColor colorWithRed:150.0/255 green:150.0/255 blue:150.0/255 alpha:1];
+        [self addSubview:self.switchLab];
+
+        
+        self.titleName = [[UILabel alloc] initWithFrame:CGRectMake(15, 6, 160, 40)];
+        self.titleName.backgroundColor = [UIColor clearColor];
+        self.titleName.font = [UIFont systemFontOfSize:27];
+        self.titleName.numberOfLines = 0;
+        self.titleName.textColor = [UIColor colorWithRed:20/255 green:170.0/255 blue:240.0/255 alpha:1];
+        [self addSubview:self.titleName];
+
+        self.switchBut = [UIButton buttonWithType:UIButtonTypeCustom];
+        self.switchBut.frame = CGRectMake(kScreen_Width - 70, 20, 60, 30);
+        [self.switchBut setImage:[UIImage imageNamed:@"button_open.png"] forState:UIControlStateNormal];
+        [self addSubview:self.switchBut];
+                
+        self.delView = [[UIView alloc] initWithFrame:CGRectMake(kScreen_Width / 4 * 3, 0, kScreen_Width / 4, 69)];
+        self.delView.backgroundColor = [UIColor redColor];
+        self.delView.hidden = YES;
+        [self addSubview:self.delView];
+        self.delImgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 30, 30)];
+        self.delImgView.center = CGPointMake(self.delView.frame.size.width / 2, 35);
+        self.delImgView.userInteractionEnabled = YES;
+        self.delImgView.image = [UIImage imageNamed:@"del.png"];
+        [self.delView addSubview:self.delImgView];
+        
+        UIView *separateLine = [[UIView alloc] initWithFrame:CGRectMake(0,  69, kScreen_Width, 1)];
+        separateLine.backgroundColor = RGBA(238.0, 238.0, 238.0, 1.0);
+        [self addSubview:separateLine];
+    }
+    return self;
+}
+
+- (void)awakeFromNib
+{
+    // Initialization code
+}
+
+- (void)setSelected:(BOOL)selected animated:(BOOL)animated
+{
+    [super setSelected:selected animated:animated];
+
+    // Configure the view for the selected state
+}
+
+@end

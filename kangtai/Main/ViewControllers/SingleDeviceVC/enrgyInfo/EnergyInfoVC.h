@@ -1,0 +1,24 @@
+//
+//  EnergyInfoVC.h
+//  kangtai
+//
+//  Created by 张群 on 14/10/30.
+//  Copyright (c) 2014年 ohbuy. All rights reserved.
+//
+
+#import "MainVC.h"
+#import "ElectricityPriceVC.h"
+
+@interface EnergyInfoVC : MainVC
+{
+    float totalMonth;
+    float totalYear;
+}
+@property (nonatomic, copy) NSString *macStr;
+@property (nonatomic, copy) NSString *currencyStr;
+//设备详细信息
+@property (nonatomic, assign)int type;
+@property (atomic, strong) Device *switchDetailInfo;
+@property (nonatomic, assign) float tmpPower;
+
+@end

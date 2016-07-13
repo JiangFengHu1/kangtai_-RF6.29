@@ -1,0 +1,173 @@
+//
+//
+/**
+ * Copyright (c) www.bugull.com
+ */
+//
+//
+"WIFI-Devices" = "WiFi-Gerät";
+"Timer" = "Timer";
+"Lock" = "Sperren";
+"Edit" = "Bearbeiten";
+"Add" = "Hinzufügen";
+
+"Setting" = "Einstellung";
+"About" = "Über";
+"Offline" = "Offline";
+"Name" = "Name";
+"Icon" = "Symbol";
+"Save" = "Speichern";
+"Mon" = "Mo";
+"Tue" = "Di";
+"Wed" = "Mi";
+"Thu" = "Do";
+"Fri" = "Fr";
+"Sat" = "Sa";
+"Sun" = "So";
+
+"ON" = "ON";
+"OFF" = "OFF";
+"Learn" = "Lernlauf";
+
+"Change Password" = "Passwort ändern";
+"WiFi Devices" = "WiFi-Gerät";
+"Add Device" = "Gerät hinzufügen";
+"Search device and connect it to WiFi" = "Gerät suchen und WiFi-Verbindung herstellen";
+
+"Device" = "Gerät";
+"Time" = "Uhrzeit";
+"Power" = "Leistung";
+"Repeat" = "Wiederholen";
+"Type" = "Typ";
+"Dimmer" = "Dimmer";
+"About Us" = "Über uns";
+"Version" = "Version";
+"Add Timer" = "Timer hinzufügen";
+
+"Chosen time error." = "Zeit fehler";
+"Chosen date error." = "Datum fehler";
+
+"WiFi SSID" = "WiFi SSID";
+"Password" = "Passwort";
+"Show Password" = "Passwort anzeigen";
+"Start" = "Start";
+"Connection process may take 30 seconds, please wait ..." = "Dieser Vorgang kann bis zu 30 Sekunden dauern.";
+"Tips" = "Tipps";
+"Ten groups timer are limited" = "Die Timer-Funktion ist leider auf 10 Gruppen begrenzt";
+"Count Down" = "Countdown";
+"Absence" = "Abwesenheit";
+"Add Count Down" = "Countdown hinzufügen";
+"Add Absence" = "Abwesenheits hinzufügen";
+"After" = "Nach";
+"From" = "Von";
+"To" = "Bis";
+"Login" = "Login";
+"Log In" = "Login";
+"Change password successfully" = "Das Passwort wurde erfolgreich geändert";
+"Forget Password"= "Passwort vergessen";
+"Sign Up"= "Registrieren";
+"Email"= "E-mail";
+"Password"= "Password";
+"RF" = "RF";
+"Email will be used to retrieve your password,please fill in" = "Sie erhalten ein neues Passwort per E-Mail. Stellen Sie sicher, dass Ihre E-Mail-Adresse richtig ist.";
+"Please enter your registered email" = "Bitte geben Sie Ihre E-Mail-Adresse ein.";
+"Register successfully" = "Erfolgreich zu registrieren";
+"Login successful"= "Anmeldung erfolgreich";
+"Account" = "Account";
+"Log Out" = "LogOut";
+"Sending" = "Übersendung";
+
+"Options can not be empty" = "Bitte eingeben";
+"One group countdown is limited,want to delete it and add a new one?" = "Die Countdown-Funktion ist leider auf 1 Gruppe begrenzt";
+"One group absence is limited" = "Die Abwesenheitsfunktion ist leider auf 1 Gruppe begrenzt";
+"Sent successfully" = "Erfolgreich gesendet";
+"More data can be loaded on the pull" = "More data can be loaded on the pull";
+"Hour" = "Stunde";
+"Minute" = "Minute";
+"Year" = "Jahr";
+"Month" = "Monat";
+"Day" = "Tag";
+"Loading" = "Laden";
+"Old password" = "Altes Passwort";
+"New password" = "Neues Passwort";
+"Confirm new password" = "Passwort bestätigen";
+"Firmware version" = "Firmware:";
+"Upgrade request has been sent" = "Die Aktualisierungsanfrage wurde versendet.";
+"Find new version" = "Find new version";
+"Current camera is unavailable" = "Current camera is invalid";
+"Device name can not be empty" = "Bitte eingeben";
+"OK" = "OK";
+"Confirm" = "OK";
+"Cancel" = "Abbrechen";
+"Camera" = "Kamera";
+"Photos" = "Foto";
+"Link Timeout" = "Auszeit";
+"Links" = "Links";
+"Sorry, this operation is only supported at local." = "Diese Funktion wird leider nur lokal unterstützt";
+"Entered password twice are different" = "Neue Passwörter stimmen nicht überein";
+"Enter the different password" = "Neue Passwörter stimmen nicht überein";
+"Password length must be longer than 6" = "Das Passwort ist zu kurz. Es muss mindestens 6 Zeichen enthalten.";
+"Enter the correct password" = "Altes Passwort ist falsch";
+"Register" = "Registrieren";
+"Please enter the wireless network password" = "Bitte geben Sie Ihr Passwort ein.";
+"Update" = "Aktualisierung";
+"Not Found" = " icht gefunden";
+
+"unit_rmb"="￥";
+"unit_doller"="$";
+"unit_"="€";
+"unit_rbl"="Rbl";
+"unit_gbp"="£";
+"Energy Info" = "Energieinfo";
+
+// 02.04
+"RF Devices" = "Funkferngesteuerte Geräte";
+"WiFi Device" = "WiFi-Gerät";
+"Add RF device" = "Funkferngesteuertes Gerät hinzufügen";
+"Device type" = "Gerätetyp";
+"Switch" = "Schalter";
+"Curtain" = "Rollladen";
+"Thermostat" = "Thermostat";
+"The nearest WiFi device" = "Nächstgelegenen einrichtung";
+"Refreshing" = "Aktualisieren";
+"Refresh" = "Refresh";
+"Up" = "Auf";
+"Down" = "Ab";
+"High" = "Hoch";
+"Low" = "Niedrig";
+"Edit RF device" = "Funkferngesteuertes Gerät bearbeiten";
+"Checking" = "Überprüfung";
+"No WiFi device with RF function" = "Kein gerät";
+"RF device name can not be empty" = "Bitte eingeben";
+"This device is offline, please select other device" = "Das WiFi-Gerät ist offline.";
+"Current network is unavailable" = "Bitte zuerst die Netzwerkeinstellung aktivieren.";
+"Connecting" = "Anschluss";
+"Connect again successfully" = "Verbindung mit dem Server ist hergestellt.";
+"Connect again failed, please check the network or device status" = "Verbindung mit dem Server fehlgeschlagen. Bitte Netzwerkeinstellungen prüfen.";
+"Email address does not exist" = "Bitte E-Mail-Adresse eingeben.";
+"Please enter a correct Email" = "Die eingegebene E-Mail-Adresse ist ungültig.";
+"Username already exist" = "Die Registrierung ist fehlgeschlagen. Bitte stellen Sie sicher, dass Ihre E-Mail-Adresse richtig ist.";
+"Username or password error" = "Die Registrierung ist fehlgeschlagen. Bitte stellen Sie sicher, dass Ihre E-Mail-Adresse richtig ist.";
+"Real-time" = "Echtzeit";
+"24H" = "24H";
+"Last 30 days" = "Letzte 30 Tage";
+"Last 12 months" = "Letzte 12 Monate";
+"Energy:" = "Energie:";
+"Cost:" = "Kosten:";
+"Real time power" = "Tatsächlicher Verbrauch";
+"Electric current" = "Strom";
+"Voltage" = "Spannung";
+"Electricity Price" = "Strompreis";
+"Unit Cost" = "Preis/Einheit";
+"Currency" = "Währung";
+"Edit Timer" = "Edit-timer";
+
+// 0629
+"later ON" = "Später ON";
+"later OFF" = "Später OFF";
+"RF Control" = "Funkfernsteuerung";
+"Refreshing..." = "Aktualisieren...";
+"Action" = "Aktion";
+"Reconnecting" = "Neuanschluss";
+"Are you sure to log out?" = "Möchten Sie sich wirklich ausloggen?";
+"WiFi Socket" = "WiFi-Steckdose";

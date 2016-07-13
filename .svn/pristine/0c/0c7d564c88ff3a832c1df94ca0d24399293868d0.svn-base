@@ -1,0 +1,167 @@
+//
+//
+/**
+ * Copyright (c) www.bugull.com
+ */
+//
+//
+"WIFI-Devices" = "WiFi设备";
+"Timer" = "定时";
+"Lock" = "锁定";
+"Edit" = "编辑";
+
+"Setting" = "设置";
+"About" = "关于";
+"Offline" = "离线";
+"Name" = "名称";
+"Icon" = "图标";
+"Cancle" = "取消";
+"Save" = "保存";
+"Mon" = "一";
+"Tue" = "二";
+"Wed" = "三";
+"Thu" = "四";
+"Fri" = "五";
+"Sat" = "六";
+"Sun" = "日";
+
+"ON" = "开";
+"OFF" = "关";
+"Learn" = "学习";
+
+"Change Password" = "修改密码";
+"WiFi Devices" = "WiFi设备";
+"Add Device" = "添加设备";
+"Search device and connect it to WiFi" = "搜索新设备使它连接到WiFi";
+
+"Device" = "设备";
+"Time" = "时间";
+"Power" = "开关";
+"Repeat" = "重复";
+"Type" = "类型";
+"Dimmer" = "调光器";
+"About Us" = "关于我们";
+"Version" = "版本";
+"Add Timer" = "添加定时";
+
+"Chosen time error." = "选中的时间错误.";
+"Chosen date error." = "选择的日期错误.";
+"Chosen time error" = "选择的时间错误";
+"WiFi SSID" = "WiFi名";
+"Password" = "密 码";
+"Show Password" = "显示密码";
+"Start" = "开 始";
+"Connection process may take 30 seconds, please wait ..." = "连接需要大概30秒，请耐心等待...";
+"Tips" = "温馨提示";
+"Ten groups timer are limited" = "最多只能添加10组定时";
+"Count Down" = "倒计时";
+"Absence" = "防盗";
+"Add Count Down" = "添加倒计时";
+"Add Absence" = "添加防盗";
+"After" = "倒计";
+"From" = "开始";
+"To" = "结束";
+"Login" = "登 录";
+"Log In"= "登 录";
+"Change password successfully" = "密码修改成功";
+"Forget Password"= "忘记密码";
+"Sign Up"= "注 册";
+"Email"= "邮 箱";
+"Password"= "密 码";
+"Confirm"= "确 认";
+"Email will be used to retrieve your password,please fill in" = "电子邮件将被用于找回密码，请填写";
+"Please enter your registered email" ="请输入您注册的邮箱";
+"Register successfully" = "注册成功";
+"Login successful"= "登录成功";
+"Account" = "账 号";
+"Log Out" = "注 销";
+"Change PassWord" = "修改密码";
+"Sending" = "发送中";
+
+"Options can not be empty"= "填写项不能为空";
+"One group countdown is limited" = "最多只能设置一组倒计时";
+"One group absence is limited" = "最多只能设置一组防盗";
+"Sent successfully" = "发送成功";
+"Hour" = "时";
+"Minute" = "分";
+"Year" = "年";
+"Month" = "月";
+"Day" = "日";
+"Old password" = "原密码";
+"New password" = "新密码";
+"Confirm new password" = "确认新密码";
+"Firmware version" = "固件版本";
+"Upgrade request has been sent." = "升级请求已发送.";
+"Find new version" = "发现最新固件版本,是否更新?";
+
+"Current camera is unavailable" = "设备无可用摄像头";
+"Device name can not be empty" = "设备名不能为空";
+"OK" = "确 认";
+"Confirm" = "确 认";
+"Cancel" = "取 消";
+"Camera" = "摄像头";
+"Photos" = "相 册";
+"Loading" = "加载中";
+"Link Timeout" = "连接超时";
+"Links" = "连接";
+"Sorry, this operation is only supported at local." = "只能在局域网时, 才能锁和解锁设备.";
+"Entered password twice are different" = "两次输入的密码不同";
+"Enter the different password" = "请输入与原密码不同的密码";
+"Password length must be longer than 6" = "密码必须多于6位";
+"Enter the correct password" = "请输入正确的原密码";
+"Register" = "注册";
+"Update" = "更 新";
+"Not Found" = "未找到";
+
+"unit_rmb"="￥";
+"unit_doller"="$";
+"unit_"="€";
+"unit_rbl"="Rbl";
+"unit_gbp"="£";
+"Energy Info" = "能耗信息";
+
+// 02.04
+"RF Devices" = "RF设备";
+"WiFi Device" = "WiFi设备";
+"Add RF device" = "添加RF设备";
+"Device type" = "设备类型";
+"Switch" = "开关";
+"Curtain" = "窗帘";
+"Thermostat" = "恒温器";
+"The nearest WiFi device" = "最近WiFi设备";
+"Check For Update" = "检查更新";
+"Current version is newest" = "当前版本已是最新";
+"Have a new version, want to update it?" = "有新版本,需要更新吗?";
+"Refreshing" = "刷新中";
+"Refresh" = "刷新";
+"Up" = "升高";
+"Down" = "降低";
+"High" = "升温";
+"Low" = "降温";
+"Edit RF device" = "编辑RF设备";
+"Checking" = "检查中";
+"No WiFi device with RF function" = "无带RF功能的WiFi设备";
+"RF device name can not be empty" = "RF设备名不能为空";
+"This device is offline, please select other device" = "选中设备离线,请选择其他设备";
+"Current network is unavailable" = "当前网络不可用";
+"Connecting" = "连接中";
+"Connect again successfully" = "再次连接成功";
+"Connect again failed, please check the network or device status" = "再次连接失败,请检查网络或设备的状态";
+"Email address does not exist" = "邮箱地址不存在";
+"Please enter a correct Email" = "请输入正确的邮箱格式";
+"Username already exist" = "用户名已存在";
+"Username or password error" = "用户名或密码错误";
+"Real-time" = "实时";
+"24H" = "24小时";
+"Last 30 days" = "过去30天";
+"Last 12 months" = "过去12个月";
+"Energy:" = "功率:";
+"Cost:" = "费用:";
+"Real time power" = "实时功率";
+"Electric current" = "实时电流";
+"Voltage" = "实时电压";
+"Electricity Price" = "电价";
+"Unit Cost" = "单价";
+"Currency" = "币种";
+"Edit Timer" = "编辑定时器";
+

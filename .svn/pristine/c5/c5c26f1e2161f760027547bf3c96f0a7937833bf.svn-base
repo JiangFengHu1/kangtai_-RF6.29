@@ -1,0 +1,20 @@
+//
+//
+/**
+ * Copyright (c) www.bugull.com
+ */
+//
+//
+
+#import "MainVC.h"
+
+@interface SetTimerVC : MainVC
+
+
+@property(nonatomic, copy) NSString *deviceId;
+@property(nonatomic, assign) int taskNumber;
+@property(nonatomic, copy) NSString *typeStr;
+@property(nonatomic, copy) NSString *macString;
+@property(nonatomic, strong) NSMutableArray *indexArray;
+
+@end

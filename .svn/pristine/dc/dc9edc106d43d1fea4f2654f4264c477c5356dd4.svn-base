@@ -1,0 +1,23 @@
+//
+//
+/**
+ * Copyright (c) www.bugull.com
+ */
+//
+//
+
+#import "MainVC.h"
+#import "Crypt.h"
+#import "HFSmartLink.h"
+#import "HFSmartLinkDeviceInfo.h"
+#import <SystemConfiguration/CaptiveNetwork.h>
+
+@interface AddDeviceVC : MainVC<UITextFieldDelegate>
+
+@property (nonatomic,assign)BOOL isShowPW;
+@property (nonatomic,strong)UILabel *deviceName;
+@property (nonatomic,strong)UITextField *pwdText;
+
+@property (nonatomic,strong)NSString *pwdStr;
+
+@end

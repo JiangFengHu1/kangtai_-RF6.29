@@ -1,0 +1,185 @@
+//
+//
+/**
+ * Copyright (c) www.bugull.com
+ */
+//
+//
+"WIFI-Devices" = "WIFI-Devices";
+"Timer" = "Timer";
+"Lock" = "Lock";
+"Edit" = "Edit";
+"Add" = "Add";
+
+"Setting" = "Setting";
+"About" = "About";
+"Offline" = "Offline";
+"Name" = "Name";
+"Icon" = "Icon";
+"Save" = "Save";
+"Mon" = "Mon";
+"Tue" = "Tue";
+"Wed" = "Wed";
+"Thu" = "Thu";
+"Fri" = "Fri";
+"Sat" = "Sat";
+"Sun" = "Sun";
+
+"ON" = "ON";
+"OFF" = "OFF";
+"Learn" = "Learn";
+
+"Change Password" = "Change Password";
+"WiFi Devices" = "WiFi Devices";
+"Add Device" = "Add Device";
+"Search device and connect it to WiFi" = "Search device and connect it to WiFi";
+
+"Device" = "Device";
+"Time" = "Time";
+"Power" = "Power";
+"Repeat" = "Repeat";
+"Type" = "Type";
+"Dimmer" = "Dimmer";
+"About Us" = "About Us";
+"Version" = "Version";
+"Add Timer" = "Add Timer";
+
+"Chosen time error." = "Chosen time error.";
+"Chosen date error." = "Chosen date error.";
+
+"WiFi SSID" = "WiFi SSID";
+"Password" = "Password";
+"Show Password" = "Show Password";
+"Start" = "Start";
+"Connection process may take 30 seconds, please wait ..." = "Connection process may take 30 seconds, please wait ...";
+"Tips" = "Tips";
+"Ten groups timer are limited" = "Ten groups timer are limited";
+"Count Down" = "Count Down";
+"Absence" = "Absence";
+"Add Count Down" = "Add Count Down";
+"Add Absence" = "Add Absence";
+"After" = "After";
+"From" = "From";
+"To" = "To";
+"Login" = "Login";
+"Log In" = "Log In";
+"Change password successfully" = "Change password successfully";
+"Forget Password"= "Forget Password";
+"Sign Up"= "Sign Up";
+"Email"= "Email";
+"Password"= "Password";
+"RF" = "RF";
+"Email will be used to retrieve your password,please fill in" = "Email will be used to retrieve your password,please fill in";
+"Please enter your registered email" = "Please enter your registered email";
+"Register successfully" = "Register successfully";
+"Login successful"= "Login successful";
+"Account" = "Account";
+"Log Out" = "Log Out";
+"Sending" = "Sending";
+
+"Options can not be empty" = "Options can not be empty";
+"One group countdown is limited" = "One group countdown is limited";
+"One group absence is limited" = "One group absence is limited";
+"Sent successfully" = "Sent successfully";
+"More data can be loaded on the pull" = "More data can be loaded on the pull";
+"Hour" = "Hour";
+"Minute" = "Minute";
+"Year" = "Year";
+"Month" = "Month";
+"Day" = "Day";
+"Loading" = "Loading";
+"Old password" = "Old password";
+"New password" = "New password";
+"Confirm new password" = "Confirm new password";
+"Firmware version" = "Firmware version";
+"Upgrade request has been sent" = "Upgrade request has been sent";
+"Find new version" = "Find new version";
+"Chosen time error" = "Chosen time error";
+"Current camera is unavailable" = "Current camera is invalid";
+"Device name can not be empty" = "Device name can not be empty";
+"OK" = "OK";
+"Confirm" = "Confirm";
+"Cancel" = "Cancel";
+"Camera" = "Camera";
+"Photos" = "Photos";
+"Loading" = "Loading";
+"Link Timeout" = "Link Timeout";
+"Links" = "Links";
+"Sorry, this operation is only supported at local." = "Sorry, this operation is only supported at local.";
+"Entered password twice are different" = "Entered password twice are different";
+"Enter the different password" = "Enter the different password";
+"Password length must be longer than 6" = "Password length must be longer than 6";
+"Enter the different password" = "Enter the different password";
+"Enter the correct password" = "Enter the correct password";
+"Register" = "Register";
+"Please enter the wireless network password" = "Please enter the wireless network password";
+"Update" = "Update";
+"Not Found" = "Not Found";
+
+"unit_rmb"="￥";
+"unit_doller"="$";
+"unit_"="€";
+"unit_rbl"="Rbl";
+"unit_gbp"="£";
+"Energy Info" = "Energy Info";
+
+// 02.04
+"RF Devices" = "RF Devices";
+"WiFi Device" = "WiFi Device";
+"Add RF device" = "Add RF device";
+"Device type" = "Device type";
+"Switch" = "Switch";
+"Curtain" = "Curtain";
+"Thermostat" = "Thermostat";
+"The nearest WiFi device" = "The nearest WiFi device";
+"Check For Update" = "Check For Update";
+"Current version is newest" = "Current version is newest";
+"Have a new version, want to update it?" = "Have a new version, want to update it?";
+"Refreshing" = "Refreshing";
+"Refresh" = "Refresh";
+"Up" = "Up";
+"Down" = "Down";
+"High" = "High";
+"Low" = "Low";
+"Edit RF device" = "Edit RF device";
+"Checking" = "Checking";
+"No WiFi device with RF function" = "No WiFi device with RF fuction";
+"RF device name can not be empty" = "RF device name can not be empty";
+"This device is offline, please select other device" = "This device is offline, please select other device";
+"Current network is unavailable" = "Current network is unavailable";
+"Connecting" = "Connecting";
+"Connect again successfully" = "Connect again successfully";
+"Connect again failed, please check the network or device status" = "Connect again failed, please check the network or device status";
+"Email address does not exist" = "Email address does not exist";
+"Please enter a correct Email" = "Please enter a correct Email";
+"Username already exist" = "Username already exist";
+"Username or password error" = "Username or password error";
+"Real-time" = "Real-time";
+"24H" = "24H";
+"Last 30 days" = "Last 30 days";
+"Last 12 months" = "Last 12 months";
+"Energy:" = "Energy:";
+"Cost:" = "Cost:";
+"Real time power" = "Real time power";
+"Electric current" = "Electric current";
+"Voltage" = "Voltage";
+"Electricity Price" = "Electricity Price";
+"Unit Cost" = "Unit Cost";
+"Currency" = "Currency";
+"Edit Timer" = "Edit Timer";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
